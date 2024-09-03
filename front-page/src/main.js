@@ -1,10 +1,9 @@
-import Vue from 'vue';
-import App from './App.vue';
-import router from './router';
+import { createApp } from 'vue' // 確保使用解構賦值方式匯入
 
-Vue.config.productionTip = false;
+import App from './App.vue'
+import router from './router' // 確保匯入 router
 
-new Vue({
-  router,
-  render: h => h(App),
-}).$mount('#app');
+const app = createApp(App)
+
+app.use(router) // 使用 router
+app.mount('#app')
