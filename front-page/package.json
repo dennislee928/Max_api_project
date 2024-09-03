@@ -12,8 +12,13 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@interchain-ui/vue": "^1.2.55",
+    "aceternity-ui": "^0.2.2",
     "chart.js": "^4.4.4",
+    "cyberpunk-vue": "^0.4.1",
+    "element-plus": "^2.8.1",
     "pinia": "^2.1.7",
+    "tailwindcss": "^3.4.10",
     "vue": "^3.4.29",
     "vue-router": "^4.4.3"
   },

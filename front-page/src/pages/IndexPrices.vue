@@ -25,28 +25,18 @@ export default {
   name: 'IndexPrices',
   data() {
     return {
-      data: null,
-      intervalId: null
+      data: null
     }
   },
   async mounted() {
-    this.fetchData()
-    this.intervalId = setInterval(this.fetchData, 5000)
-  },
-  beforeUnmount() {
-    clearInterval(this.intervalId)
-  },
-  methods: {
-    async fetchData() {
-      try {
-        const response = await fetch('/api/v3/wallet/m/index_prices')
-        if (!response.ok) {
-          throw new Error('Network response was not ok')
-        }
-        this.data = await response.json()
-      } catch (error) {
-        console.error('Error fetching data:', error)
+    try {
+      const response = await fetch('/api/v3/wallet/m/index_prices')
+      if (!response.ok) {
+        throw new Error('Network response was not ok')
       }
+      this.data = await response.json()
+    } catch (error) {
+      console.error('Error fetching data:', error)
     }
   }
 }
