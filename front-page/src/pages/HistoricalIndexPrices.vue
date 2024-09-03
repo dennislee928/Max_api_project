@@ -20,8 +20,8 @@ export default {
       const market = 'btctwd'
       const endTime = Math.floor(Date.now() / 1000)
       const startTime = endTime - 30 * 24 * 60 * 60
-
-      const url = new URL('/api/v3/wallet/m/historical_index_prices')
+      const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || 'https://max-api.maicoin.com'
+      const url = new URL('/api/v3/wallet/m/historical_index_prices', apiBaseUrl)
       url.searchParams.append('market', market)
       url.searchParams.append('start_time', startTime)
       url.searchParams.append('end_time', endTime)

@@ -125,9 +125,8 @@ export default {
   methods: {
     async fetchData() {
       try {
-        const url = new URL('/api/v3/tickers', window.location.origin)
-        url.searchParams.append('markets', this.market)
-
+        const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || 'https://max-api.maicoin.com'
+        const url = new URL('/api/v3/tickers', apiBaseUrl)
         const response = await fetch(url)
         if (!response.ok) {
           throw new Error('Network response was not ok')

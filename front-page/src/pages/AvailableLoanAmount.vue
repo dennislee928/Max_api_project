@@ -35,7 +35,8 @@ export default {
   methods: {
     async fetchLoanAmount() {
       try {
-        const url = new URL('/api/v3/wallet/m/limits', window.location.origin)
+        const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || 'https://max-api.maicoin.com'
+        const url = new URL('/api/v3/wallet/m/limits', apiBaseUrl)
 
         const response = await fetch(url)
         if (!response.ok) {
