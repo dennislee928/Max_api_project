@@ -1,5 +1,3 @@
-
-
 [[headers]]
   for = "/*"
   [headers.values]
@@ -10,7 +8,7 @@
 ## https://docs.netlify.com/routing/redirects/redirect-options/
 
 [[redirects]]
-  from = "/api/*" # simplify all calls to serverless functions
-  to = "/.netlify/functions/:splat" # all function calls will go to this path
-  status = 200 # ok code
-  headers = { Access-Control-Allow-Origin = "*" }
+  from = "/api/*"
+  to = "https://max-api.maicoin.com/:splat"
+  status = 200
+  force = true
