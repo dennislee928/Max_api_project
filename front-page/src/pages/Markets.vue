@@ -16,7 +16,7 @@
     methods: {
       async fetchMarkets() {
         try {
-          const response = await fetch('https://max-api.maicoin.com/api/v3/markets');
+          const response = await fetch('/api/v3/markets');
           if (!response.ok) {
             throw new Error('Network response was not ok');
           }

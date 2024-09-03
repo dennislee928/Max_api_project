@@ -17,7 +17,7 @@
       async fetchRecentTrades() {
         const market = 'btctwd';
         const limit = 50;
-        const url = new URL('https://max-api.maicoin.com/api/v3/trades');
+        const url = new URL('/api/v3/trades');
         url.searchParams.append('market', market);
         url.searchParams.append('limit', limit);
   

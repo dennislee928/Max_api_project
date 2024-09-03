@@ -18,7 +18,7 @@
         const market = 'btctwd';
         const limit = 300;
         const sortByPrice = true;
-        const url = new URL('https://max-api.maicoin.com/api/v3/depth');
+        const url = new URL('/api/v3/depth');
         url.searchParams.append('market', market);
         url.searchParams.append('limit', limit);
         url.searchParams.append('sort_by_price', sortByPrice);

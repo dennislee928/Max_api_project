@@ -18,7 +18,7 @@
         const market = 'btctwd';
         const startTime = 1512950400000;
         const endTime = 1513555200000;
-        const url = new URL('https://max-api.maicoin.com/api/v3/wallet/m/historical_index_prices');
+        const url = new URL('/api/v3/wallet/m/historical_index_prices');
         url.searchParams.append('market', market);
         url.searchParams.append('start_time', startTime);
         url.searchParams.append('end_time', endTime);

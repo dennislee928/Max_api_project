@@ -18,7 +18,7 @@
         const market = 'btctwd';
         const limit = 30;
         const period = 1;
-        const url = new URL('https://max-api.maicoin.com/api/v3/k');
+        const url = new URL('/api/v3/k');
         url.searchParams.append('market', market);
         url.searchParams.append('limit', limit);
         url.searchParams.append('period', period);
