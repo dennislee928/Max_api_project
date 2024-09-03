@@ -50,19 +50,15 @@ export default {
       data: null
     }
   },
-  methods: {
-    async fetchData() {
-      try {
-        const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || 'https://max-api.maicoin.com'
-        const url = new URL('/api/v3/currencies', apiBaseUrl)
-        const response = await fetch(url)
-        if (!response.ok) {
-          throw new Error('Network response was not ok')
-        }
-        this.data = await response.json()
-      } catch (error) {
-        console.error('Error fetching data:', error)
+  async mounted() {
+    try {
+      const response = await fetch('/api/v3/currencies')
+      if (!response.ok) {
+        throw new Error('Network response was not ok')
       }
+      this.data = await response.json()
+    } catch (error) {
+      console.error('Error fetching data:', error)
     }
   }
 }

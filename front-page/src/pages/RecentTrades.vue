@@ -124,10 +124,11 @@ export default {
     }
   },
   methods: {
-    async fetchData() {
+    async fetchRecentTrades() {
       try {
-        const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || 'https://max-api.maicoin.com'
-        const url = new URL('/api/v3/trades', apiBaseUrl)
+        const url = new URL('/api/v3/trades', window.location.origin)
+        url.searchParams.append('market', this.selectedMarket)
+
         const response = await fetch(url)
         if (!response.ok) {
           throw new Error('Network response was not ok')

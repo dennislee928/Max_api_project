@@ -1,4 +1,5 @@
 <template>
+  <NavBar />
   <div>
     <h1>Ticker</h1>
     <div>
@@ -11,24 +12,34 @@
       <table>
         <thead>
           <tr>
-            <th>ID</th>
-            <th>Price</th>
-            <th>Volume</th>
-            <th>Funds</th>
             <th>Market</th>
-            <th>Side</th>
-            <th>Created At</th>
+            <th>Buy</th>
+            <th>Buy Volume</th>
+            <th>Sell</th>
+            <th>Sell Volume</th>
+            <th>Open</th>
+            <th>Low</th>
+            <th>High</th>
+            <th>Last</th>
+            <th>Volume</th>
+            <th>Volume in BTC</th>
+            <th>Timestamp</th>
           </tr>
         </thead>
         <tbody>
-          <tr v-for="ticker in data" :key="ticker.id">
-            <td>{{ ticker.id }}</td>
-            <td>{{ ticker.price }}</td>
-            <td>{{ ticker.volume }}</td>
-            <td>{{ ticker.funds }}</td>
-            <td>{{ ticker.market }}</td>
-            <td>{{ ticker.side }}</td>
-            <td>{{ new Date(ticker.created_at).toLocaleString() }}</td>
+          <tr>
+            <td>{{ data.market }}</td>
+            <td>{{ data.buy }}</td>
+            <td>{{ data.buy_vol }}</td>
+            <td>{{ data.sell }}</td>
+            <td>{{ data.sell_vol }}</td>
+            <td>{{ data.open }}</td>
+            <td>{{ data.low }}</td>
+            <td>{{ data.high }}</td>
+            <td>{{ data.last }}</td>
+            <td>{{ data.vol }}</td>
+            <td>{{ data.vol_in_btc }}</td>
+            <td>{{ new Date(data.at * 1000).toLocaleString() }}</td>
           </tr>
         </tbody>
       </table>
@@ -41,7 +52,7 @@
 
 <script>
 export default {
-  name: 'TickerPage', // 修改這裡
+  name: 'TickerComponent', // 修改名稱以符合多字規則
   data() {
     return {
       selectedMarket: 'btctwd',
@@ -124,10 +135,12 @@ export default {
     }
   },
   methods: {
-    async fetchData() {
+    async fetchTickerData() {
       try {
-        const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || 'https://max-api.maicoin.com'
-        const url = new URL('/api/v3/ticker', apiBaseUrl)
+        const url = new URL('/api/v3/ticker', window.location.origin)
+
+        url.searchParams.append('market', this.selectedMarket)
+
         const response = await fetch(url)
         if (!response.ok) {
           throw new Error('Network response was not ok')
