@@ -12,3 +12,4 @@
   to = "https://max-api.maicoin.com/:splat"
   status = 200
   force = true
+  headers = {X-From = "Netlify"}
