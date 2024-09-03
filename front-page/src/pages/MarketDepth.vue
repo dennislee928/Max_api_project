@@ -1,4 +1,5 @@
 <template>
+  <NavBar />
   <div>
     <h1>Market Depth</h1>
     <div>
@@ -53,7 +54,7 @@
 
 <script>
 export default {
-  name: 'MarketDepth',
+  name: 'MarketDepthComponent',
   data() {
     return {
       selectedMarket: 'btctwd',
@@ -138,7 +139,8 @@ export default {
   methods: {
     async fetchMarketDepth() {
       try {
-        const response = await fetch(`/api/v3/depth?market=${this.selectedMarket}`)
+        const url = `https://cors-anywhere.herokuapp.com/https://max-api.maicoin.com/api/v3/depth?market=${this.selectedMarket}`
+        const response = await fetch(url)
         if (!response.ok) {
           throw new Error('Network response was not ok')
         }

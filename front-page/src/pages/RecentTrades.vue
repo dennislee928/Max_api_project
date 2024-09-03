@@ -41,7 +41,7 @@
 
 <script>
 export default {
-  name: 'RecentTrades',
+  name: 'RecentTradesComponent',
   data() {
     return {
       selectedMarket: 'btctwd',
@@ -126,7 +126,9 @@ export default {
   methods: {
     async fetchRecentTrades() {
       try {
-        const url = new URL('/api/v3/trades', window.location.origin)
+        const url = new URL(
+          'https://cors-anywhere.herokuapp.com/https://max-api.maicoin.com/api/v3/trades'
+        )
         url.searchParams.append('market', this.selectedMarket)
 
         const response = await fetch(url)

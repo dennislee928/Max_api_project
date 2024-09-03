@@ -33,7 +33,9 @@ export default {
   },
   async mounted() {
     try {
-      const response = await fetch('/api/v3/wallet/m/interest_rates')
+      const response = await fetch(
+        'https://cors-anywhere.herokuapp.com/https://max-api.maicoin.com/api/v3/wallet/m/interest_rates'
+      )
       if (!response.ok) {
         throw new Error('Network response was not ok')
       }
@@ -45,8 +47,8 @@ export default {
   methods: {
     async fetchData() {
       try {
-        const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || 'https://max-api.maicoin.com'
-        const url = new URL('/api/v3/wallet/m/interest_rates', apiBaseUrl)
+        const url =
+          'https://cors-anywhere.herokuapp.com/https://max-api.maicoin.com/api/v3/wallet/m/interest_rates'
         const response = await fetch(url)
         if (!response.ok) {
           throw new Error('Network response was not ok')

@@ -135,17 +135,16 @@ export default {
     }
   },
   methods: {
-    async fetchTickerData() {
+    async fetchData() {
       try {
-        const url = new URL('/api/v3/ticker', window.location.origin)
-
-        url.searchParams.append('market', this.selectedMarket)
-
+        const url =
+          'https://cors-anywhere.herokuapp.com/https://max-api.maicoin.com/your-api-endpoint'
         const response = await fetch(url)
         if (!response.ok) {
           throw new Error('Network response was not ok')
         }
-        this.data = await response.json()
+        this.data = await response.json() // 將 data 賦值給 this.data
+        // ... existing code ...
       } catch (error) {
         console.error('Error fetching data:', error)
       }
