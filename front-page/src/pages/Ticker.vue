@@ -137,8 +137,7 @@ export default {
   methods: {
     async fetchData() {
       try {
-        const url =
-          'https://cors-anywhere.herokuapp.com/https://max-api.maicoin.com/your-api-endpoint'
+        const url = 'https://maxproxy.pcleegood.workers.dev/api/v3/ticker'
         const response = await fetch(url)
         if (!response.ok) {
           throw new Error('Network response was not ok')
@@ -151,7 +150,7 @@ export default {
     }
   },
   async mounted() {
-    await this.fetchTickerData()
+    await this.fetchData()
   }
 }
 </script>

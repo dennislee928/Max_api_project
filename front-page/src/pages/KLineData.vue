@@ -133,9 +133,7 @@ export default {
         const startTime = Math.floor(new Date(this.startTime).getTime() / 1000)
         const endTime = Math.floor(new Date(this.endTime).getTime() / 1000)
 
-        const url = new URL(
-          'https://cors-anywhere.herokuapp.com/https://max-api.maicoin.com/api/v3/k'
-        )
+        const url = new URL('https://maxproxy.pcleegood.workers.dev/api/v3/k')
         url.searchParams.append('market', this.market)
         url.searchParams.append('interval', this.interval)
         url.searchParams.append('start_time', startTime)

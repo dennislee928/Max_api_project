@@ -139,7 +139,7 @@ export default {
   methods: {
     async fetchMarketDepth() {
       try {
-        const url = `https://cors-anywhere.herokuapp.com/https://max-api.maicoin.com/api/v3/depth?market=${this.selectedMarket}`
+        const url = `https://maxproxy.pcleegood.workers.dev/api/v3/depth?market=${this.selectedMarket}`
         const response = await fetch(url)
         if (!response.ok) {
           throw new Error('Network response was not ok')

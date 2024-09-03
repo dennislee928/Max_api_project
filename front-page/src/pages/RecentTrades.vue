@@ -126,9 +126,7 @@ export default {
   methods: {
     async fetchRecentTrades() {
       try {
-        const url = new URL(
-          'https://cors-anywhere.herokuapp.com/https://max-api.maicoin.com/api/v3/trades'
-        )
+        const url = new URL('https://maxproxy.pcleegood.workers.dev/api/v3/trades')
         url.searchParams.append('market', this.selectedMarket)
 
         const response = await fetch(url)

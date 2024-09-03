@@ -19,7 +19,7 @@ export default {
   async mounted() {
     try {
       const response = await fetch(
-        'https://cors-anywhere.herokuapp.com/https://max-api.maicoin.com/api/v3/wallet/m/index_prices'
+        'https://maxproxy.pcleegood.workers.dev/api/v3/wallet/m/index_prices'
       )
       if (!response.ok) {
         throw new Error('Network response was not ok')
@@ -32,8 +32,7 @@ export default {
   methods: {
     async fetchData() {
       try {
-        const url =
-          'https://cors-anywhere.herokuapp.com/https://max-api.maicoin.com/api/v3/wallet/m/index_prices'
+        const url = 'https://maxproxy.pcleegood.workers.dev/api/v3/wallet/m/index_prices'
         const response = await fetch(url)
         if (!response.ok) {
           throw new Error('Network response was not ok')

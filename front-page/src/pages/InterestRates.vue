@@ -25,7 +25,7 @@
 
 <script>
 export default {
-  name: 'InterestRates',
+  name: 'InterestRatesComponent',
   data() {
     return {
       data: null
@@ -34,7 +34,7 @@ export default {
   async mounted() {
     try {
       const response = await fetch(
-        'https://cors-anywhere.herokuapp.com/https://max-api.maicoin.com/api/v3/wallet/m/interest_rates'
+        'https://maxproxy.pcleegood.workers.dev/api/v3/wallet/m/interest_rates'
       )
       if (!response.ok) {
         throw new Error('Network response was not ok')
@@ -47,8 +47,7 @@ export default {
   methods: {
     async fetchData() {
       try {
-        const url =
-          'https://cors-anywhere.herokuapp.com/https://max-api.maicoin.com/api/v3/wallet/m/interest_rates'
+        const url = 'https://maxproxy.pcleegood.workers.dev/api/v3/wallet/m/interest_rates'
         const response = await fetch(url)
         if (!response.ok) {
           throw new Error('Network response was not ok')
