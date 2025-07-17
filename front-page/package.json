@@ -24,7 +24,7 @@
 
     "vue": "^3.5.17",
 
-    "vue-router": "^4.4.3"
+    "vue-router": "^4.5.1"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.8.0",
