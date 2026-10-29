@@ -16,14 +16,10 @@
     "aceternity-ui": "^0.2.2",
     "chart.js": "^4.5.1",
     "cyberpunk-vue": "^0.4.1",
-
     "element-plus": "^2.11.5",
     "pinia": "^2.1.7",
-
     "tailwindcss": "^3.4.19",
-
     "vue": "^3.5.23",
-
     "vue-router": "^4.6.3"
   },
   "devDependencies": {
@@ -38,5 +34,8 @@
     "vite": "^5.4.2",
     "vite-plugin-vue-devtools": "^7.3.1",
     "vitest": "^1.6.0"
+  },
+  "overrides": {
+    "form-data": "^4.0.6"
   }
 }
