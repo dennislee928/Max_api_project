@@ -64,6 +64,7 @@
     "js-cookie": "^3.0.7",
     "source-map-js": "^1.2.2",
     "zod": "^4.6.6",
-    "postcss-selector-parser": "^6.1.5"
+    "postcss-selector-parser": "^6.1.5",
+    "@babel/helpers": "^7.26.10"
   }
 }
