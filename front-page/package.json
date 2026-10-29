@@ -58,6 +58,7 @@
     "picomatch": "^2.3.2",
     "rollup": "^4.59.0",
     "ws": "^8.21.0",
-    "@vue/server-renderer": "^3.5.42"
+    "@vue/server-renderer": "^3.5.42",
+    "cross-spawn": "^7.0.5"
   }
 }
