@@ -73,6 +73,7 @@
     "esbuild": "^0.25.0",
     "follow-redirects": "^1.16.0",
     "yaml": "^2.8.3",
-    "@babel/core": "^7.29.6"
+    "@babel/core": "^7.29.6",
+    "diff": "^5.2.2"
   }
 }
