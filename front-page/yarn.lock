@@ -3320,9 +3320,9 @@ rimraf@^3.0.2:
   dependencies:
     glob "^7.1.3"
 
-rollup@^4.34.9:
+rollup@^4.34.9, rollup@^4.59.0:
   version "4.66.0"
-  resolved "https://registry.npmjs.org/rollup/-/rollup-4.66.0.tgz"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-4.66.0.tgz#de6b85adfeedac7718adb66370b7be1d07bab6ad"
   integrity sha512-Onq6/qO4ARhxIs+jYiHE0pYehadLyMECAiGEqQ+0/aWND3+2PmifJIIqBLYtuBODqHTlOUEQFtIVPyCy0Lck7A==
   dependencies:
     "@types/estree" "1.0.9"
