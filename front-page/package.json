@@ -62,7 +62,7 @@
     "ws": "^8.21.0",
     "@vue/server-renderer": "^3.5.42",
     "cross-spawn": "^7.0.5",
-    "glob": "^10.5.0",
+    "glob": "^14.0.2",
     "js-cookie": "^3.0.7",
     "source-map-js": "^1.2.2",
     "zod": "^4.6.6",
