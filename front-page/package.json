@@ -16,14 +16,10 @@
     "aceternity-ui": "^0.2.2",
     "chart.js": "^4.5.1",
     "cyberpunk-vue": "^0.4.1",
-
     "element-plus": "^2.11.5",
     "pinia": "^2.1.7",
-
     "tailwindcss": "^3.4.19",
-
     "vue": "^3.5.23",
-
     "vue-router": "^4.6.3"
   },
   "devDependencies": {
@@ -35,8 +31,49 @@
     "eslint-plugin-vue": "^9.23.0",
     "jsdom": "^24.1.0",
     "prettier": "^3.2.5",
-    "vite": "^5.4.2",
+    "vite": "^6.4.4",
     "vite-plugin-vue-devtools": "^7.3.1",
-    "vitest": "^1.6.0"
+    "vitest": "^3.2.6"
+  },
+  "overrides": {
+    "form-data": "^4.0.6",
+    "tinypool": "^2.1.2",
+    "axios": "^1.20.0",
+    "rollup": "^4.59.0",
+    "esbuild": "^0.25.0",
+    "follow-redirects": "^1.16.0"
+  },
+  "resolutions": {
+    "form-data": "^4.0.6",
+    "tinypool": "^2.1.2",
+    "axios": "^1.20.0",
+    "brace-expansion": "^2.1.7",
+    "js-yaml": "^4.3.2",
+    "postcss": "^8.5.23",
+    "nanoid": "^3.3.18",
+    "lodash": "^4.18.0",
+    "lodash-es": "^4.18.0",
+    "minimatch": "^11.0.1",
+    "browserslist": "^4.28.7",
+    "flatted": "^3.4.2",
+    "lodash.template": "^4.18.0",
+    "picomatch": "^2.3.2",
+    "rollup": "^4.59.0",
+    "ws": "^8.21.0",
+    "@vue/server-renderer": "^3.5.42",
+    "cross-spawn": "^7.0.5",
+    "glob": "^14.0.2",
+    "js-cookie": "^3.0.7",
+    "source-map-js": "^1.2.2",
+    "zod": "^4.6.6",
+    "postcss-selector-parser": "^6.1.5",
+    "@babel/helpers": "^7.26.10",
+    "@babel/runtime": "^7.26.10",
+    "ajv": "^6.14.0",
+    "esbuild": "^0.25.0",
+    "follow-redirects": "^1.16.0",
+    "yaml": "^2.8.3",
+    "@babel/core": "^7.29.6",
+    "diff": "^5.2.2"
   }
 }
